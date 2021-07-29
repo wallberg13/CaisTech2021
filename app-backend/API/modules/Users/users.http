@@ -1,0 +1,34 @@
+@host = http://localhost:5000
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTYyMDA4MjgsImV4cCI6MTYxNjI4NzIyOCwic3ViIjoie1wiaWRcIjoxLFwib2x0c19pZFwiOm51bGwsXCJyZWFkX3dyaXRlXCI6Mn0ifQ.cpoDUFrUEUzNxfevl8b_MdM4YXX7lC3L_bMivUNoTXE
+
+### Rota para criar um user
+POST {{host}}/users
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Cais Tech - Admin",
+  "username": "caistech@tech.com",
+  "password": "tech123",
+  "profile_id": 3
+}
+
+### List
+GET {{host}}/users
+Authorization: Bearer {{token}}
+
+### Update dos users
+PUT {{host}}/users/13
+Content-Type: application/json
+
+{
+  "name": "Cais Tech - Admin - 1234",
+  "username": "caistech@tech.com",
+  "old_password": "caistech123",
+  "password": "caistech123",
+  "active": 1
+}
+
+### Delete users
+DELETE {{host}}/users/2

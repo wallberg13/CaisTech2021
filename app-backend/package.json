@@ -1,0 +1,43 @@
+{
+  "name": "app-backend",
+  "version": "0.0.8",
+  "description": "App Backend - Backend do curso de Deploy do CaisTech",
+  "main": "src/app.js",
+  "repository": "https://github.com/wallberg13/caistech2021",
+  "author": "Wall Berg Morais",
+  "license": "MIT",
+  "bin": "src/app.js",
+  "pkg": {
+    "assets": [
+      "./**/*"
+    ],
+    "targets": [
+      "node14"
+    ]
+  },
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "build": "scripts/build.sh",
+    "debug": "node --inspect src/app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "celebrate": "^14.0.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "date-fns": "^2.22.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "pkg": "^4.5.1"
+  }
+}

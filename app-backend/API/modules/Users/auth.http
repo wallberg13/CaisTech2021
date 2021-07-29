@@ -1,0 +1,14 @@
+@host = http://localhost:5000/api
+
+### AUTH
+POST {{host}}/auth/
+Content-Type: application/json
+
+{
+  "username": "cais@tech.com",
+  "password": "caistech"
+}
+
+### GET - Verify Token
+GET {{host}}/auth/verify_token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTYyMDA4MjgsImV4cCI6MTYxNjI4NzIyOCwic3ViIjoie1wiaWRcIjoxLFwib2x0c19pZFwiOm51bGwsXCJyZWFkX3dyaXRlXCI6Mn0ifQ.cpoDUFrUEUzNxfevl8b_MdM4YXX7lC3L_bMivUNoTXE
