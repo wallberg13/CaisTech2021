@@ -30,7 +30,7 @@ module.exports = ({ db }) => {
     celebrate({
       [Segments.BODY]: {
         description: Joi.string().required(),
-        olts_id: Joi.array().items(Joi.number()).min(0),
+        equips_id: Joi.array().items(Joi.number()).min(0),
         read_write: Joi.number().required(),
       },
     }),
@@ -55,7 +55,7 @@ module.exports = ({ db }) => {
       },
       [Segments.BODY]: {
         description: Joi.string(),
-        olts_id: Joi.array().items(Joi.number()).min(0),
+        equips_id: Joi.array().items(Joi.number()).min(0),
         read_write: Joi.number(),
         active: Joi.boolean(),
       },

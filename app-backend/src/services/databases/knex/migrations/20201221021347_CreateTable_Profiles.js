@@ -10,7 +10,7 @@ exports.up = function (knex) {
 
     table.string("description").unique().notNullable();
 
-    table.string("olts_id");
+    table.string("equips_id");
 
     table.boolean("read_write").notNullable().defaultTo(false);
 

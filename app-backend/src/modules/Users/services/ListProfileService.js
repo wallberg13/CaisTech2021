@@ -1,9 +1,6 @@
 const { isNull } = require("lodash");
 const AppError = require("../../../shared/errors/AppError");
 
-/**
- * Classe que possui o objetivo de listar os slots / ports de uma OLT.
- */
 module.exports = class ListOLTsStatsService {
   /**
    * @param {Object} updateParams
@@ -23,9 +20,8 @@ module.exports = class ListOLTsStatsService {
       const listProfiles = await this.profilesRepository.findAll();
 
       const ret = listProfiles.map((lp) => {
-        lp.olts_id = (isNull(lp.olts_id)
-          ? []
-          : lp.olts_id.split(",")
+        lp.equips_id = (
+          isNull(lp.equips_id) ? [] : lp.equips_id.split(",")
         ).map((o) => Number(o));
 
         return lp;

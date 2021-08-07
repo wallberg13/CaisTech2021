@@ -9,10 +9,6 @@ const { jwt } = require("../../../constants/config");
  * @property {String} password
  */
 
-/**
- * Classe que possui como objetivo, realizar o processo de adição
- * de uma OLT no OLTZ.
- */
 module.exports = class AddAuthService {
   /**
    * @param {Object} updateParams
@@ -50,7 +46,7 @@ module.exports = class AddAuthService {
       const token = sign({}, jwt.secret, {
         subject: JSON.stringify({
           id: userDB.user_id,
-          olts_id: userDB.olts_id,
+          equips_id: userDB.equips_id,
           read_write: userDB.read_write,
         }), // Jogando como subject, apenas os itens de permissão
         expiresIn: jwt.expiresIn,
@@ -58,7 +54,7 @@ module.exports = class AddAuthService {
 
       delete userDB.password;
       delete userDB.profile_id;
-      delete userDB.olts_id;
+      delete userDB.equips_id;
       userDB.read_write = [userDB.read_write];
 
       return { token, user: userDB };

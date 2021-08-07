@@ -13,11 +13,11 @@ module.exports = class OLTsController {
   async index(req, res) {
     // Obtendo o corpo da requisição.
 
-    const { olts_id } = req.userPermission;
+    const { equips_id } = req.userPermission;
 
     const listOLTsService = new ListOLTsService({});
 
-    const list = await listOLTsService.exec(olts_id);
+    const list = await listOLTsService.exec(equips_id);
 
     return res.json(list);
   }

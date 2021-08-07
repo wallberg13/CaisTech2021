@@ -84,7 +84,7 @@ function PermissionForm(props: Props) {
                         options={props.olts}
                         label="Olts Allowed"
                         required
-                        name="olts_id"
+                        name="equips_id"
                         {...inputProps}
                         multiple={true}
                     />

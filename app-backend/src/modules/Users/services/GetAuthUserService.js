@@ -9,10 +9,6 @@ const { jwt } = require("../../../constants/config");
  * @property {String} password
  */
 
-/**
- * Classe que possui como objetivo, realizar o processo de adição
- * de uma OLT no OLTZ.
- */
 module.exports = class GetAuthUserService {
   /**
    * @param {Object} updateParams
@@ -39,7 +35,7 @@ module.exports = class GetAuthUserService {
 
       delete userDB.password;
       delete userDB.profile_id;
-      delete userDB.olts_id;
+      delete userDB.equips_id;
       delete userDB.active;
       userDB.read_write = [userDB.read_write];
 

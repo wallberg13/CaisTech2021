@@ -81,7 +81,7 @@ function PermissionScreen() {
     const onFormSubmit = (partialPermission: Partial<Permission>, permissionId: any) => {
         const permission = new Permission(
             partialPermission.description ?? '',
-            partialPermission.olts_id ?? [],
+            partialPermission.equips_id ?? [],
             partialPermission.read_write ?? 0,
         );
 

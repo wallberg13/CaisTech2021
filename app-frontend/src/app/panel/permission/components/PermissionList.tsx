@@ -44,8 +44,8 @@ function PermissionList({ list, requestUpdate, requestDelete, olts }: Props) {
             .map<string>((role) => Util.roleToBrlString(role))
             .join(', '); */
 
-        const listOlts = item.olts_id.length ? (
-            item.olts_id.map((item: number, idx: number) => (
+        const listOlts = item.equips_id.length ? (
+            item.equips_id.map((item: number, idx: number) => (
                 <Chip
                     key={'olt-item-' + idx}
                     component="span"

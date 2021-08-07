@@ -9,10 +9,6 @@ const BCrypt = require("../../../providers/BCrypt");
  * @property {String} password
  */
 
-/**
- * Classe que possui como objetivo, realizar o processo de adição
- * de uma OLT no OLTZ.
- */
 module.exports = class AddUserService {
   /**
    * @param {Object} updateParams

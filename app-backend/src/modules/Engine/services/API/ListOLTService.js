@@ -13,10 +13,10 @@ module.exports = class ListOLTService {
 
   /**
    *
-   * @param {Array<Number>} olts_id
+   * @param {Array<Number>} equips_id
    * @returns {Promise<Object>}
    */
-  async exec(olts_id) {
+  async exec(equips_id) {
     try {
       const ret = [
         {

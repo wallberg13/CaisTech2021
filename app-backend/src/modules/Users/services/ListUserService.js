@@ -1,8 +1,4 @@
 const AppError = require("../../../shared/errors/AppError");
-
-/**
- * Classe que possui o objetivo de realizar a listagem das OLTs.
- */
 module.exports = class ListUserService {
   /**
    *

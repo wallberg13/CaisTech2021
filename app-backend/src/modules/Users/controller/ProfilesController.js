@@ -28,7 +28,8 @@ module.exports = class ProfilesController {
   async create(req, res) {
     const { body } = req;
 
-    body.olts_id = body.olts_id.length === 0 ? null : body.olts_id.join(",");
+    body.equips_id =
+      body.equips_id.length === 0 ? null : body.equips_id.join(",");
 
     const addProfileRepository = new AddProfileService({
       profilesRepository: this.profilesRepository,
@@ -63,7 +64,8 @@ module.exports = class ProfilesController {
     const { id } = req.params;
     const body = req.body;
 
-    body.olts_id = body.olts_id.length === 0 ? null : body.olts_id.join(",");
+    body.equips_id =
+      body.equips_id.length === 0 ? null : body.equips_id.join(",");
 
     const updateProfileService = new UpdateProfileService({
       profilesRepository: this.profilesRepository,

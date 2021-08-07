@@ -3,7 +3,7 @@ import { MultiOption } from '../components/MyMultiSelectField';
 export class Permission {
     id?: number;
     description: string;
-    olts_id: number[];
+    equips_id: number[];
     read_write: number;
     active?: number;
     createdAt?: Date;
@@ -12,7 +12,7 @@ export class Permission {
 
     constructor(
         description: string,
-        olts_id: number[],
+        equips_id: number[],
         read_write: number,
         id?: number,
         active?: number,
@@ -22,7 +22,7 @@ export class Permission {
     ) {
         this.id = id;
         this.description = description;
-        this.olts_id = olts_id;
+        this.equips_id = equips_id;
         this.read_write = read_write;
         this.active = active;
         this.createdAt = createdAt ? new Date(createdAt) : undefined;
@@ -33,7 +33,7 @@ export class Permission {
     static fromJson(data: any): Permission {
         return new Permission(
             data.description,
-            data.olts_id,
+            data.equips_id,
             data.read_write,
             data.id,
             data.active,

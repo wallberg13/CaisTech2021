@@ -32,7 +32,7 @@ module.exports = class UsersRepository {
           "users.active as user_active",
           "p.id as profile_id",
           "p.description",
-          "p.olts_id",
+          "p.equips_id",
           "p.read_write"
         )
         .innerJoin("profiles as p", "p.id", "users.profile_id")
@@ -79,7 +79,7 @@ module.exports = class UsersRepository {
           "username",
           "password",
           "profile_id",
-          "p.olts_id",
+          "p.equips_id",
           "p.read_write"
         )
         .innerJoin("profiles as p", "p.id", "users.profile_id")
@@ -112,7 +112,7 @@ module.exports = class UsersRepository {
           "password",
           "users.active as active",
           "profile_id",
-          "p.olts_id",
+          "p.equips_id",
           "p.read_write"
         )
         .innerJoin("profiles as p", "p.id", "users.profile_id")

@@ -75,17 +75,17 @@ module.exports = class ProfilesRepository {
    */
   async updateByUser(data) {
     try {
-      const { id, description, olts_id, read_write, active } = data;
+      const { id, description, equips_id, read_write, active } = data;
 
       // VERIFICAÇÕES PRÉVIAS
       SEARCH_KEY_UNDEFINED(id); // O id (chave primaria) deve ser definida
       IS_NULL_OR_EMPTY_STRING([description]); // Campos que nao podem ser atualizados para vazio, null (se for undefined nao e atualizado)
-      IS_ALL_UNDEFINED([description, olts_id, read_write, active]); // Pelo menos um campo precisa ser diferente de undefined
+      IS_ALL_UNDEFINED([description, equips_id, read_write, active]); // Pelo menos um campo precisa ser diferente de undefined
 
       // EXECUÇÃO
       const ret = await this.knex()
         .where({ id, deleted: 0 })
-        .update({ description, olts_id, read_write, active })
+        .update({ description, equips_id, read_write, active })
         .returning();
 
       // VERIFICAÇÕES APÓS ATUALIZAÇÃO

@@ -3,14 +3,10 @@ const AppError = require("../../../shared/errors/AppError");
 /**
  * @typedef AddProfileDTO
  * @property {String} description
- * @property {String} olts_id
+ * @property {String} equips_id
  * @property {Number} read_write
  */
 
-/**
- * Classe que possui como objetivo, realizar o processo de adição
- * de uma OLT no OLTZ.
- */
 module.exports = class AddProfileService {
   /**
    * @param {Object} updateParams

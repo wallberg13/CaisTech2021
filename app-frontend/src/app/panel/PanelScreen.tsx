@@ -2,7 +2,7 @@ import React from 'react';
 import PanelRouter from './PanelRouter';
 import PanelFrame from '../shared/components/PanelFrame';
 import logoWhite from '../../assets/images/white-logo.svg';
-import logoBlue from '../../assets/images/blue-logo.svg';
+import logoBlue from '../../assets/images/black-logo.svg';
 import { menu } from '../shared/constants/menu';
 import { MenuItem } from '../shared/model/menu-item';
 import { useHistory } from 'react-router-dom';

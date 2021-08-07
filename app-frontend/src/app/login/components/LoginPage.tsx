@@ -27,7 +27,7 @@ export default function LoginPage({ formSubmit, load }: Props): JSX.Element {
                 <Grid item xs={10} sm={6} md={4} lg={2}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
-                            <Box height={[40, 60, 50]} clone>
+                            <Box height={[100, 60, 50]} clone>
                                 <img src={logo} alt="Logo" />
                             </Box>
                         </Grid>

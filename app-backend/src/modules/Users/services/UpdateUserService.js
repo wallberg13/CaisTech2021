@@ -10,11 +10,6 @@ const BCrypt = require("../../../providers/BCrypt");
  * @property {String} profile_id
  * @property {String} active
  */
-
-/**
- * Classe que possu como objetivo, realizar o update de algumas informações
- * da OLT.
- */
 module.exports = class UpdateUserService {
   /**
    *
@@ -34,15 +29,8 @@ module.exports = class UpdateUserService {
    */
   async exec(updateDTO) {
     try {
-      const {
-        id,
-        name,
-        username,
-        password,
-        old_password,
-        profile_id,
-        active,
-      } = updateDTO;
+      const { id, name, username, password, old_password, profile_id, active } =
+        updateDTO;
 
       const userDB = await this.usersRepository.findById(id);
       userDB.id = userDB.user_id;

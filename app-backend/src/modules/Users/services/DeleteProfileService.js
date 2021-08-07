@@ -1,9 +1,5 @@
 const AppError = require("../../../shared/errors/AppError");
 
-/**
- * Classe que possui como objetivo, realizar o processo de adição
- * de uma OLT no OLTZ.
- */
 module.exports = class DeleteProfileService {
   /**
    * @param {Object} updateParams

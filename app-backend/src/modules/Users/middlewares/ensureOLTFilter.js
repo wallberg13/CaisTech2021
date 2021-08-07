@@ -11,12 +11,12 @@ module.exports = {
   ensureOLTFilter: (req, res, next) => {
     /** @type {import("./ensureAuthenticated").Subscription} */
     const userPermission = req.userPermission;
-    const { olts_id } = userPermission;
+    const { equips_id } = userPermission;
     const { olt_id, id } = req.params;
 
     const oltParam = olt_id ? Number(olt_id) : Number(id);
 
-    if (!oltParam || !olts_id || olts_id.includes(oltParam)) {
+    if (!oltParam || !equips_id || equips_id.includes(oltParam)) {
       return next();
     }
 

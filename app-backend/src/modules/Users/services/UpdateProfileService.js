@@ -4,14 +4,9 @@ const AppError = require("../../../shared/errors/AppError");
  * @typedef UpdateDTO
  * @property {Number} id
  * @property {String} description
- * @property {String} olts_id
+ * @property {String} equips_id
  * @property {Boolean} read_write
  * @property {Boolean} active
- */
-
-/**
- * Classe que possu como objetivo, realizar o update de algumas informações
- * da OLT.
  */
 module.exports = class UpdateProfileService {
   /**
@@ -32,13 +27,13 @@ module.exports = class UpdateProfileService {
    */
   async exec(updateDTO) {
     try {
-      const { id, active, description, olts_id, read_write } = updateDTO;
+      const { id, active, description, equips_id, read_write } = updateDTO;
 
       await this.profilesRepository.updateByUser({
         id,
         active,
         description,
-        olts_id,
+        equips_id,
         read_write,
       });
     } catch (e) {

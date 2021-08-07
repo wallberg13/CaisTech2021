@@ -5,7 +5,7 @@ const AppError = require("../../../shared/errors/AppError");
 /**
  * @typedef Subscription
  * @property {Number} id
- * @property {Array<Number>} olts_id
+ * @property {Array<Number>} equips_id
  * @property {Number} read_write
  *
  */
@@ -35,8 +35,8 @@ module.exports = {
       // Injetando as permissões de usuário.
       req.userPermission = userPermission;
 
-      if (userPermission.olts_id) {
-        req.userPermission.olts_id = userPermission.olts_id
+      if (userPermission.equips_id) {
+        req.userPermission.equips_id = userPermission.equips_id
           .split(",")
           .map((id) => Number(id));
       }
