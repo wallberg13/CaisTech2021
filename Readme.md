@@ -17,6 +17,11 @@
 
 <!-- Providenciando um servidor -->
 
+<figure class="image">
+  <img src="./assets/infra-final.svg" alt="{{ include.description }}">
+  <figcaption><b>Infraestrutura Final</b></figcaption>
+</figure>
+
 ## **Provisionando uma infraestrutura**
 
 - Servidor na Digital Ocean:
