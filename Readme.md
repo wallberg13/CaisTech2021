@@ -237,11 +237,11 @@ pm2 start build/app-backend --name AppBackend
 
 ##### 4.3.1 - Entendendo o NGINX
 
-###### **O que é o NGINX?**
+###### **4.3.1.1 - O que é o NGINX?**
 
 "O NGINX é um servidor web open source de alta performance que entrega conteúdo estático de um site de forma rápida e fácil de configurar" [Rockcontent](https://rockcontent.com/br/blog/nginx/).
 
-###### **Proxy Reverso**
+###### **4.3.1.2 - Proxy Reverso**
 
 Proxy Reverso é um o servidor web que recebe requisições, e o mesmo "direciona" tais requisições para quem processar estas mesmas. No nosso caso, o proxy reverso é utilizado para fazer o direcionamento das requisições com o pré-fixo "https://caistech.dev/api" serem processadas pelo o nosso backend.
 
@@ -259,46 +259,41 @@ A configuração do NGINX pode ser feita, utilizando o padrão do nginx.conf (ar
 Mas a principio, o que precisamos fazer:
 
 1. Criar o arquivo de configuração da nossa aplicação na pasta: `/etc/nginx/sites-available`
-2. (Opcional) Checar se os arquivos de configurações estão todos nos conformes (afinal, podemos rodar mais de uma aplicação web, e para cada aplicação, existe um arquivo de configuração.).
+2. (Opcional) Checar se os arquivos de configurações estão todos nos conformes (afinal, podemos rodar mais de uma aplicação web, e para cada aplicação, existe um arquivo de configuração.), com o `nginx -t`.
 3. Criar um link simbólico na pasta `/etc/nginx/sites-enabled`. Afinal, todas as aplicações servidas no NGINX precisam está nesta pasta.
    ```bash
    ln -s /etc/nginx/sites-available/<created_file> /etc/nginx/sites-enabled/<link_name>
    ```
    - Para saber que o link está certo, basta dá um `ls -la`. Se no arquivo que você acabou de criar estiver azul, e com uma **seta** no lado do arquivo apontando para o arquivo original, então está tudo correto. Caso o arquivo estiver vermelho, algo deu errado.
 
-## Explorando o NGINX
+##### 4.3.3 - Adicionando o HTTPs no site com o CertBot.
 
-- O que o [NGINX](https://rockcontent.com/br/blog/nginx/)?
+Para add o HTTPS com o Certbot, basta executar e seguir o passado a passo que o comando lhe entrega na saída.
 
-  - O que ele faz?
+```bash
+certbot --nginx
+```
 
-    - Prover aplicações web (arquivo estático HTML).
-    - Funciona como Proxy Reverso (vamos utilizar para o backend).
+##### 4.3.4 - Subindo o frontend
 
-  - Configurando o NGINX:
+Dependendo do servidor que estamos subindo a aplicação frontend, é interessante ou não fazer o build do front no próprio servidor, pois, pelo menos no caso do ReactJS, ele exige recursos além do servidor básico que estamos obtendo. Para isso, existe sempre as duas opções:
 
-    - ctrl+c e ctrl+v da colinha. :-)
+1. Realizar o Build no próprio servidor, mas ele precisa ter recurso para tal.
+   - No caso do ReactJS, precisamos basicamente, dá um `yarn build`, e a pasta criada no build precisa está "apontada" no arquivo de configuração do NGINX. Isso porque, é o que o NGINX usa como referência para buscar os arquivos estáticos do front.
+2. Realizar o Build na máquina local e subir para o servidor utilizando o `scp`.
+   - Para isso, vamos realizar o build, conforme a opção anterior, e fazer um `scp <PATH_FRONT_BUID> <user>@<ip/dominio>:<PATH_DESCRITO_NO_NGINX>`.
 
-  - OBS:
-    - Dá pra subir qualquer aplicação frontend com o NGINX. O que importa para o mesmo, é o "entrypoint" do HTML da página, que geralmente é o index.html.
+Uma vez que o Front Subiu, é só partir para o abraço.
 
-## Adicionado o HTTPS
+### Links para Estudos + Automação
 
-- Para add o HTTPS com o Certbot, basta executar:
-
-  ```bash
-  certbot --nginx
-  ```
+Para automatizar o processo de atualização, o CI/CD atende bem, além de todas as ferramentas de DevOps.
 
 - Links Úteis:
 
-  - [Docker e Docker Compose](https://blog.rocketseat.com.br/introducao-ao-docker-criando-um-servidor-web-com-node-js-e-subindo-para-o-container/)
-  - [Imagem Bitnami MySQL](https://github.com/bitnami/bitnami-docker-mysql)
-
+- [Docker e Docker Compose](https://blog.rocketseat.com.br/introducao-ao-docker-criando-um-servidor-web-com-node-js-e-subindo-para-o-container/)
+- [Imagem Bitnami MySQL](https://github.com/bitnami/bitnami-docker-mysql)
 - [Criando Dopplet](https://www.digitaloceanbr.com.br/como-criar-droplet-digitalocean.html)
-  - [Criando uma Chave SSH](https://www.digitalocean.com/community/tutorials/como-configurar-chaves-ssh-no-ubuntu-18-04-pt)
-  - [Chave SSH - Opção 02](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server-pt)
-
-```
-
-```
+- [Criando uma Chave SSH](https://www.digitalocean.com/community/tutorials/como-configurar-chaves-ssh-no-ubuntu-18-04-pt)
+- [Chave SSH - Opção 02](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server-pt)
+- [CI/CD - O que é](https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd)
