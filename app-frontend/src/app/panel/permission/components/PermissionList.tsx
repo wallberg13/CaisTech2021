@@ -33,10 +33,10 @@ type Props = {
     list: Permission[];
     requestDelete: (Permission: Permission) => void;
     requestUpdate: (user: Permission) => void;
-    olts: MultiOption[];
+    equips: MultiOption[];
 };
 
-function PermissionList({ list, requestUpdate, requestDelete, olts }: Props) {
+function PermissionList({ list, requestUpdate, requestDelete, equips }: Props) {
     const classes = useStyles();
 
     const listTiles = list.map((item: Permission, idx: number) => {
@@ -44,19 +44,19 @@ function PermissionList({ list, requestUpdate, requestDelete, olts }: Props) {
             .map<string>((role) => Util.roleToBrlString(role))
             .join(', '); */
 
-        const listOlts = item.equips_id.length ? (
+        const listequips = item.equips_id.length ? (
             item.equips_id.map((item: number, idx: number) => (
                 <Chip
-                    key={'olt-item-' + idx}
+                    key={'equip-item-' + idx}
                     component="span"
                     size="small"
-                    label={Util.oltHostname(olts, item)}
+                    label={Util.equipHostname(equips, item)}
                     color="secondary"
                     className={classes.chip}
                 />
             ))
         ) : (
-            <Chip size="small" label="FULL OLTS" component="span" color="secondary" />
+            <Chip size="small" label="FULL equips" component="span" color="secondary" />
         );
 
         return (
@@ -98,7 +98,7 @@ function PermissionList({ list, requestUpdate, requestDelete, olts }: Props) {
                                     className={classes.inline}
                                     color="textPrimary"
                                 >
-                                    {listOlts}
+                                    {listequips}
                                 </Typography>
                             </React.Fragment>
                         }

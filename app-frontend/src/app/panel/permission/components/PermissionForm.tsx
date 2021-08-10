@@ -12,7 +12,7 @@ type Props = {
     submitBtnRef: React.RefObject<HTMLButtonElement>;
     formSubmit: (permission: Partial<Permission>, permissionId: any, reset?: () => void) => void;
     selectedItem: Permission;
-    olts: MultiOption[];
+    equips: MultiOption[];
     isUpdate: boolean;
     load?: boolean;
 };
@@ -81,8 +81,8 @@ function PermissionForm(props: Props) {
                     <MyMultiSelectField
                         errors={errors}
                         control={control}
-                        options={props.olts}
-                        label="Olts Allowed"
+                        options={props.equips}
+                        label="Equips Allowed"
                         required
                         name="equips_id"
                         {...inputProps}

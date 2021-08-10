@@ -5,7 +5,7 @@ import { Util } from '../../shared/helpers/util';
 import { Permission } from '../../shared/model/permission';
 import { PermissionService } from '../../shared/service/permission-service';
 import PermissionPage from './components/PermissionPage';
-import { OltService } from '../../shared/service/olt-service';
+import { EquipService } from '../../shared/service/equip-service';
 import { MultiOption } from '../../shared/components/MyMultiSelectField';
 
 function PermissionScreen() {
@@ -16,7 +16,7 @@ function PermissionScreen() {
     const [formLoad, setFormLoad] = React.useState<boolean>(false);
 
     const [list, setList] = React.useState<Permission[] | null>([]);
-    const [olts, setOlts] = React.useState<MultiOption[] | null>([]);
+    const [equips, setEquips] = React.useState<MultiOption[] | null>([]);
     const [selectedItem, setSelectedItem] = React.useState<Permission>(defaultPermission);
     const [showForm, setShowForm] = React.useState(false);
     const snackbar = useSnackbar();
@@ -95,8 +95,8 @@ function PermissionScreen() {
             const permissions = await PermissionService.findAll();
             setList(permissions);
 
-            const olts = await OltService.findAllForPermission();
-            setOlts(olts);
+            const equips = await EquipService.findAllForPermission();
+            setEquips(equips);
         } catch (e) {
             setList(null);
         } finally {
@@ -113,7 +113,7 @@ function PermissionScreen() {
             load={load}
             formLoad={formLoad}
             list={list}
-            olts={olts ?? []}
+            equips={equips ?? []}
             selectedItem={selectedItem}
             requestUpdate={onRequestCreateOrUpdate}
             requestCreate={onRequestCreateOrUpdate}

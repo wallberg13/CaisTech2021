@@ -6,7 +6,7 @@ Content-Type: application/json
 
 {
   "description": "null",
-  "olts_id": null,
+  "equips_id": null,
   "read_write": false
 }
 
@@ -20,7 +20,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTYyNzExMTIsImV4cCI6MTYxNjM1NzUxMiwic3ViIjoie1wiaWRcIjoxLFwib2x0c19pZFwiOm51bGwsXCJyZWFkX3dyaXRlXCI6Mn0ifQ.ojPbZx3uOENtiWG6OJ6zw0uLmSVW-pKdFindVFqNAqM
 
 {
-  "olts_id": []
+  "equips_id": []
 }
 
 ### Delete Profiles

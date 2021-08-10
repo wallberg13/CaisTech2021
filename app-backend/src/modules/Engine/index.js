@@ -1,4 +1,4 @@
-const oltRoutes = require("./routes/olts.routes");
+const equipsRoutes = require("./routes/equips.routes");
 
 const { enviromentTest } = require("../../constants/config");
 const {
@@ -13,15 +13,9 @@ const {
  * @param {import("../../services/databases").DatabaseOutput} EngineInjectDTO.db
  */
 module.exports = ({ app, db }) => {
-  // Talvez, estas funções sejam melhor encaixadas em outro lugar.
-  // services({ db });
-  /**
-   * Garantindo que os acessos às subrotas aqui contidas
-   * possuam autenticação.
-   */
   if (enviromentTest !== "true") {
-    app.use("/api/olts", ensureAuthenticated);
+    app.use("/api/equips", ensureAuthenticated);
   }
 
-  app.use("/api/olts", oltRoutes({ db }));
+  app.use("/api/equips", equipsRoutes({ db }));
 };

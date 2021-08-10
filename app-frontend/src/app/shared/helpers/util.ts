@@ -16,11 +16,11 @@ export class Util {
         }
     }
 
-    static oltHostname(olts: MultiOption[], olt: number): any {
-        if (olt) {
-            const oltSelected = olts.filter((item) => item.value === olt);
+    static equipHostname(equips: MultiOption[], equip: number): any {
+        if (equip) {
+            const equipsSelected = equips.filter((item) => item.value === equip);
 
-            return oltSelected[0].label;
+            return equipsSelected[0].label;
         }
         return '?';
     }

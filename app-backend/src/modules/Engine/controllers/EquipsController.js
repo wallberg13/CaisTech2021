@@ -1,4 +1,4 @@
-const ListOLTsService = require("../services/API/ListOLTService");
+const ListEquipService = require("../services/ListEquipService");
 
 module.exports = class OLTsController {
   constructor({}) {
@@ -15,9 +15,9 @@ module.exports = class OLTsController {
 
     const { equips_id } = req.userPermission;
 
-    const listOLTsService = new ListOLTsService({});
+    const listEquipService = new ListEquipService({});
 
-    const list = await listOLTsService.exec(equips_id);
+    const list = await listEquipService.exec(equips_id);
 
     return res.json(list);
   }

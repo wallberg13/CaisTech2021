@@ -6,7 +6,7 @@ const {
   ensurePermission,
 } = require("../../Users/middlewares/ensurePermission");
 
-const OLTsController = require("../controllers/OLTsController");
+const EquipsController = require("../controllers/EquipsController");
 
 /**
  *
@@ -16,10 +16,10 @@ const OLTsController = require("../controllers/OLTsController");
  * @param {import("../services/API/AddOLTService").ScriptCallback} RouterDTO.ontInfoScript
  * @returns {Router}
  */
-module.exports = ({ db, foreverTrafficUpdate, ontInfoScript }) => {
+module.exports = () => {
   const router = Router();
 
-  const oltController = new OLTsController({});
+  const equipsController = new EquipsController({});
 
   /**
    * Rota para obter todas as OLTs.
@@ -28,7 +28,7 @@ module.exports = ({ db, foreverTrafficUpdate, ontInfoScript }) => {
   router.get(
     "/",
     enviromentTest !== "true" ? ensurePermission(READ_USER) : blankMiddleware,
-    oltController.index
+    equipsController.index
   );
 
   return router;

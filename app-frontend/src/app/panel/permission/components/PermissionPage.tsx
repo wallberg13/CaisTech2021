@@ -15,7 +15,7 @@ type Props = {
     load: boolean;
     formLoad?: boolean;
     list: Permission[] | null;
-    olts: MultiOption[];
+    equips: MultiOption[];
     selectedItem: Permission;
     requestCreate: () => void;
     requestDelete: (permission: Permission) => void;
@@ -62,7 +62,7 @@ function PermissionPage(props: Props) {
                     list={props.list ?? []}
                     requestUpdate={props.requestUpdate}
                     requestDelete={props.requestDelete}
-                    olts={props.olts ?? []}
+                    equips={props.equips ?? []}
                 />
             </ContentFrame>
             <DrawerEmpty
@@ -78,7 +78,7 @@ function PermissionPage(props: Props) {
                     formSubmit={props.formSubmit}
                     submitBtnRef={submitBtnRef}
                     selectedItem={props.selectedItem}
-                    olts={props.olts ?? []}
+                    equips={props.equips ?? []}
                     isUpdate={isUpdate}
                 />
             </DrawerEmpty>

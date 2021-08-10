@@ -231,7 +231,7 @@ function PanelFrame(props: Props) {
                         <Box
                             height={40}
                             clone
-                            onClick={() => history.push('/panel/olts')}
+                            onClick={() => history.push('/panel/user')}
                             style={{ cursor: 'pointer' }}
                         >
                             <img src={props.logo} alt="Logo" />
