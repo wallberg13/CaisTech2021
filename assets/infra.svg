@@ -6,12 +6,40 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg87"
    viewBox="-0.5 -0.5 665 139"
    height="139"
    width="665"
    version="1.1"
-   style="background-color: rgb(255, 255, 255);">
+   style="background-color: rgb(255, 255, 255);"
+   sodipodi:docname="infra.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:export-filename="/home/paredeman/infra-inicial.png"
+   inkscape:export-xdpi="500"
+   inkscape:export-ydpi="500">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1916"
+     inkscape:window-height="2138"
+     id="namedview43"
+     showgrid="false"
+     inkscape:snap-text-baseline="false"
+     inkscape:zoom="2.5094316"
+     inkscape:cx="352.55602"
+     inkscape:cy="2.512236"
+     inkscape:window-x="3840"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g77" />
   <metadata
      id="metadata91">
     <rdf:RDF>
@@ -20,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,53 +90,12 @@
     <rect
        id="rect15"
        pointer-events="all"
-       stroke="#000000"
-       fill="#ffffff"
        height="90"
        width="90"
        y="21"
-       x="343" />
-    <g
-       id="g21"
-       transform="translate(-0.5 -0.5)">
-      <switch
-         id="switch19">
-        <foreignObject
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
-           height="100%"
-           width="100%"
-           pointer-events="none"
-           style="overflow: visible; text-align: left;">
-          <xhtml:div
-             style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 28px; margin-left: 344px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                <xhtml:div>Backend</xhtml:div>
-                <xhtml:div>
-                  <xhtml:br />
-                </xhtml:div>
-                <xhtml:div>NodeJS</xhtml:div>
-                <xhtml:div>
-                  <xhtml:br />
-                </xhtml:div>
-                <xhtml:div>Listen on 5000<xhtml:br />
-</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           id="text17"
-           text-anchor="middle"
-           font-size="12px"
-           font-family="Helvetica"
-           fill="#000000"
-           y="40"
-           x="388">Backend...</text>
-      </switch>
-    </g>
+       x="343"
+       stroke="#000000"
+       fill="#ffffff" />
     <path
        id="path23"
        pointer-events="stroke"
@@ -179,12 +166,29 @@
         </foreignObject>
         <text
            id="text33"
-           text-anchor="middle"
            font-size="12px"
+           y="40"
+           x="208"
+           text-anchor="middle"
            font-family="Helvetica"
            fill="#000000"
-           y="40"
-           x="208">FrontEnd...</text>
+           style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">
+          <tspan
+             sodipodi:role="line"
+             id="tspan850">FrontEnd</tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan852"></tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan854">ReactJS</tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan856"></tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan858">Listen on 4000</tspan>
+        </text>
       </switch>
     </g>
     <rect
@@ -351,5 +355,60 @@
        stroke="none"
        fill="#000000"
        d="M 30.59 65.06 C 33.34 66.48 36.46 67.28 39.76 67.28 C 43.06 67.28 46.17 66.48 48.92 65.07 C 52.05 65.26 55.73 66.8 59.17 69.02 C 62.91 71.45 66.35 74.66 68.59 77.49 C 73.55 84.24 75.73 90.41 75.57 101.95 L 4.05 101.95 C 4.23 88.1 6.5 82.87 12.87 75.1 C 15.8 71.86 23.08 66.24 30.59 65.06 Z M 39.76 30.05 C 49.24 30.05 56.89 37.7 56.89 47.17 C 56.89 53.56 53.4 59.12 48.23 62.06 C 48.15 62.06 48.08 62.06 48.01 62.06 L 48.01 62.19 C 45.56 63.53 42.75 64.3 39.76 64.3 C 30.29 64.3 22.64 56.65 22.64 47.17 C 22.64 37.7 30.29 30.05 39.76 30.05 Z M 39.76 27.06 C 28.67 27.06 19.65 36.08 19.65 47.17 C 19.65 53.46 22.56 59.09 27.09 62.77 C 19.77 64.84 13.6 69.83 10.63 73.13 C 10.61 73.14 10.59 73.16 10.58 73.18 C 3.74 81.53 1 87.95 1 103.45 C 1 103.84 1.16 104.22 1.44 104.5 C 1.72 104.78 2.1 104.94 2.49 104.94 L 77.09 104.94 C 77.9 104.94 78.56 104.3 78.59 103.49 C 79 90.47 76.45 83.14 70.98 75.7 C 70.97 75.69 70.96 75.67 70.95 75.66 C 68.47 72.52 64.84 69.15 60.79 66.52 C 58.17 64.82 55.38 63.42 52.57 62.66 C 57.03 58.97 59.87 53.4 59.87 47.17 C 59.87 36.08 50.85 27.06 39.76 27.06 Z" />
+    <g
+       transform="translate(180.16993,-1.0902712)"
+       id="g37-8">
+      <switch
+         id="switch35-5">
+        <foreignObject
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           height="100%"
+           width="100%"
+           pointer-events="none"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 28px; margin-left: 164px;">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center; ">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                <xhtml:div>FrontEnd</xhtml:div>
+                <xhtml:div>
+                  <xhtml:br />
+                </xhtml:div>
+                <xhtml:div>ReactJS</xhtml:div>
+                <xhtml:div>
+                  <xhtml:br />
+                </xhtml:div>
+                <xhtml:div>Listen on 4000<xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           id="text33-1"
+           font-size="12px"
+           y="40"
+           x="208"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;">
+          <tspan
+             sodipodi:role="line"
+             id="tspan911">Backend</tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan913"></tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan915">NodeJS</tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan917"></tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan919">Listen on 3000</tspan>
+        </text>
+      </switch>
+    </g>
   </g>
 </svg>

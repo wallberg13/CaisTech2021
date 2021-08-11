@@ -216,7 +216,7 @@ yarn build
 
 ###### **4.2.2.4 - Tornar a aplicação disponível em algum gerenciador de processos**
 
-Para a nossa aplicação, estaremos rodando a mesma no `PM2` (título do curso).
+Para a nossa aplicação, estaremos rodando a mesma no `PM2`.
 
 ```bash
 pm2 start build/app-backend --name AppBackend
@@ -232,6 +232,8 @@ pm2 start build/app-backend --name AppBackend
   pm2 logs <id> # listando os logs do processo
   pm2 logs <id> --lines 1000 # Listando as ultimas X linhas dos logs + acompanhamento do log atual.
   ```
+
+  Podemos também fazer um monitoramento On-line, em: https://app.pm2.io
 
 #### 4.3 - Preparando e rodando o FrontEnd
 
